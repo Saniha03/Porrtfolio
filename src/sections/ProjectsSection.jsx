@@ -66,10 +66,10 @@ export default function ProjectsSection() {
   return (
     <section id="projects" className="section projects-section">
       <h2 className="section-title reveal">My Projects</h2>
-      <p className="projects-subtitle">
+      <p className="projects-subtitle reveal">
         Purpose-driven digital products blending faith, wellbeing, and meaningful impact.
       </p>
-      <div className="project-filters">
+      <div className="project-filters reveal">
         {filterOptions.map(option => (
           <button
             key={option.id}
@@ -83,7 +83,7 @@ export default function ProjectsSection() {
       </div>
       <div className="project-grid">
         {filteredProjects.map((p, i) => (
-          <div key={p.title} className={`project-card ${p.featured ? 'featured' : ''}`}>
+          <div key={i} className={`project-card ${p.featured ? 'featured' : ''} reveal`}>
             {p.featured && <div className="project-glow" />}
             <div className="project-header">
               <span className="project-icon">{p.icon}</span>
